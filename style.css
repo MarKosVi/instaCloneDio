@@ -8,97 +8,141 @@
     font-size: 14px;
 }
 
-.flex-container{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.cellphone {
+.instagram-wrapper{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 90%;
-    margin-right: -200px;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+    
 }
 
-.cellphone img {
-    width: 100%;
-}
-
-.login {
+.instagram-phone{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    min-height: 34rem;
+    width: 50%;
+}
+
+.instagram-phone img{
+    height: 50rem
+}
+
+.instagram-login{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    width: 50%;  
     min-width: 34rem;
 }
 
-.card{
+.card {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #ffffff;
-    width: 60%;
+    flex-flow: column;
+    background-color: #fff;
+    width: 100%;
     padding: 1.3rem 0;
     border: 1px solid lightgray;
-    margin: 5px;
     color: rgb(160, 160, 160);
 }
 
-.card #perfilPicture{
-    border-radius: 50%;
-    width: 20%;
-    margin: 10px;
-    min-width: 5rem;
+.card:nth-child(1){
+    min-height: 19rem;
+    margin-bottom: 0.5rem ;
 }
 
-.card #buttonInsta{
-    padding: 8px;
-    background-color: #0095f6;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-    margin: 10px 10px 20px 10px;
-    font-size: 14px;
-}
-
-.card #buttonInsta:hover{
-    background-color: #0765a3;
+.logo{
+    height: 3rem;
     cursor: pointer;
 }
 
-.card a {
-    color: #0095f6;
+.perfilPicture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;   
 }
 
-.buttons {
+.perfilPicture img{
+    height: 6rem;
+}
+
+.buttonInsta{
+    background-color: #0095f6;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonInsta:hover{
+    background-color: #0f79c0;
+}
+
+.linkBlue, .linkBlue a{
+    color: #0095f6;
+    cursor: pointer;
+}
+
+.instagram-get{
     display: flex;
     flex-flow: column;
     align-items: center;
-    align-content: flex-start;
-    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
 }
 
-.buttonBox img{
-    width: 150px;
-    margin: 15px;
+.instagram-buttonBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.buttonDownload img{
+    width: 10rem;
+    height: 3rem;
+    background-size: cover;
 }
 
 
-
-@media(max-width: 992px){
-    .flex-container{
-        justify-content: center;
+@media(max-width: 1024px){
+    .instagram-wrapper{
+        width: 90%;
     }
-    
-    .cellphone {
+}
+
+
+@media(max-width: 650px){
+    .body{
+        background-color: #fff;
+    }
+
+    .instagram-wrapper{
+        width: 90%;
+    }
+
+    .instagram-phone{
         display: none;
+    }
+
+    .instagram-login{
+        width: 100%;
     }
 }
