@@ -20,21 +20,23 @@
 .cellphone {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-end;
+    width: 90%;
+    margin-right: -200px;
 }
 
 .cellphone img {
-    width: 90%;
+    width: 100%;
 }
 
 .login {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     min-height: 34rem;
+    min-width: 34rem;
 }
 
 .card{
@@ -43,28 +45,37 @@
     justify-content: center;
     flex-direction: column;
     background-color: #ffffff;
-    width: 80%;
+    width: 60%;
     padding: 1.3rem 0;
     border: 1px solid lightgray;
+    margin: 5px;
+    color: rgb(160, 160, 160);
 }
 
 .card #perfilPicture{
     border-radius: 50%;
     width: 20%;
     margin: 10px;
+    min-width: 5rem;
 }
 
 .card #buttonInsta{
     padding: 8px;
-    background-color: blue;
+    background-color: #0095f6;
     color: #fff;
     border-radius: 5px;
     border: none;
     margin: 10px 10px 20px 10px;
+    font-size: 14px;
+}
+
+.card #buttonInsta:hover{
+    background-color: #0765a3;
+    cursor: pointer;
 }
 
 .card a {
-    color: blue;
+    color: #0095f6;
 }
 
 .buttons {
@@ -72,22 +83,22 @@
     flex-flow: column;
     align-items: center;
     align-content: flex-start;
-    margin-top: 30px;
-}
-
-.buttons .buttonBox{
-    display: flex;
-
+    margin-top: 20px;
 }
 
 .buttonBox img{
-    width: 180px;
+    width: 150px;
     margin: 15px;
 }
 
 
 
-
-
-
-
+@media(max-width: 992px){
+    .flex-container{
+        justify-content: center;
+    }
+    
+    .cellphone {
+        display: none;
+    }
+}
